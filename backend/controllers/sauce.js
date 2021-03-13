@@ -1,6 +1,5 @@
 const Sauce = require('../models/sauce');
 const fs = require('fs');
-const { userSetter } = require('core-js/fn/symbol');
 const validator = require('validator')
 function checkInput(input) {
     const regex = /^[a-zA-Z0-9-\é\è\ê\â\ô\;\,\.\:\"\'\s]+$/;
