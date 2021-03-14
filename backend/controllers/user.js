@@ -8,7 +8,7 @@ const validator = require('validator')
 
 
 exports.signup = (req, res, next) => {
-    if (validator.isEmail(req.body.email) === true && validator.contains(req.body.email, '/') === false) {
+    if (validator.isEmail(req.body.email) === true && validator.contains(req.body.email, '/') === false && validator.isStrongPassword(req.body.password , {minSymbols: 0}) === true ) {
         bcrypt.hash(req.body.password, 10)
             .then(hash => {
 
