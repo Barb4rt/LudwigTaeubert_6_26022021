@@ -12,7 +12,6 @@ const helmet = require("helmet");
 
 const rateLimit = require("express-rate-limit");
 
-const dotenv = require('dotenv').config()
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -24,7 +23,7 @@ const sauceRoutes = require('./routes/sauce');
 
 const userRoutes = require('./routes/user');
 
-mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.MDP}@cluster0.qvpqk.mongodb.net/piquante?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://User__001:1234@cluster0.qvpqk.mongodb.net/piquante?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
