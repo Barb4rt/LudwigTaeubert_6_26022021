@@ -28,7 +28,7 @@ const sauceRoutes = require('./routes/sauce');
 
 const userRoutes = require('./routes/user');
 
-mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.MDP}@cluster0.qvpqk.mongodb.net/piquante?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_MDP}@cluster0.qvpqk.mongodb.net/piquante?retryWrites=true&w=majority`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
